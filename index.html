@@ -1,26 +1,63 @@
 <!DOCTYPE html>
-<html> 
-
-<head>
-    <meta charset=utf-8/>
-    <link rel="stylesheet" href="style.css">
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
     <title>hw-04</title>
-</head>
+  </head>
 
-
-<body>
+  <body>
     <h1>Event Handling</h1>
-        <div class="shapes">
-            <svg width="200" height="200">
-            <circle class="circle1" cx="100" cy="100" r="90" stroke="black" stroke-width="5" fill="green" />
-            </svg>
-            <svg width="200" height="200">
-            <circle class="circle2" cx="100" cy="100" r="90" fill="blue" />
-            </svg>
-            <svg width="200" height="200">
-            <circle class="circle3" cx="100" cy="100" r="90" stroke="black" stroke-width="5" fill="yellow" />
-            </svg>
-        </div>
-</body>
-
+    <div class="shapes">
+      <svg width="200" height="200">
+        <circle
+          id="circle1"
+          cx="100"
+          cy="100"
+          r="90"
+          stroke="black"
+          stroke-width="5"
+          fill="green"
+          onClick="circle1Clicked()"
+        />
+        <text
+          x="50%"
+          y="50%"
+          text-anchor="middle"
+          stroke="black"
+          stroke-width="1px"
+          dy=".3em"
+          id="number"
+        >
+          0
+        </text>
+      </svg>
+      <svg width="200" height="200">
+        <circle
+          id="circle2"
+          onmouseenter="fillInBorder()"
+          onmouseout="disappearBorder()"
+          cx="100"
+          cy="100"
+          r="90"
+          fill="blue"
+          stroke="none"
+          stroke-width="5"
+        />
+      </svg>
+      <svg width="200" height="200">
+        <circle
+          cx="100"
+          cy="100"
+          r="90"
+          stroke="black"
+          stroke-width="5"
+          fill="yellow"
+          id="circle3"
+          onclick="circle3Clicked()"
+        />
+      </svg>
+    </div>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
 </html>
